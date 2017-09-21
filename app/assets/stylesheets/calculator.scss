@@ -1,0 +1,94 @@
+// Place all the styles related to the calculator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+section.demo {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display:flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.menu-logo {
+  max-height: 50px;
+}
+
+.btn-join {
+  line-height: 20px;
+  padding: 10px 15px;
+}
+
+section.demo.intro_container {
+  height: 90vh;
+  align-items: center;
+  text-align: center;
+  div {
+    max-width: 500px;
+  }
+}
+
+section.demo#results {
+  //justify-content: center;
+}
+
+.calculator_title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+.explanation {
+  font-size: 1.1em;
+}
+
+.form_title {
+  font-size: 2.0em;
+}
+
+.footer {
+  text-align: center;
+  font-size: 2.0em;
+  a, a:hover, i {
+    color: teal;
+    text-decoration: none;
+  }
+  i {
+    font-size: 2.5em;
+  }
+}
+
+.number_select {
+  max-width: 60px;
+}
+
+#electricity, #gasoline {
+  width: 90%;
+}
+
+.top_buffer {
+  margin-top: 20px;
+}
+
+.bottom_buffer {
+  margin-bottom: 20px;
+}
+
+.share_row {
+  width: 100%;
+  min-height: 80px;
+  i {
+    color: teal;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}
