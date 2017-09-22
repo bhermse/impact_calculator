@@ -10,6 +10,11 @@ $('.calculating').fadeOut('slow', function () {
         var dividend = numeral($('.dividend').html()).value();
         var impact = dividend - cost;
         $('.net_impact').html(numeral(impact).format('$0,0.00'));
+        if(impact > 0) {
+            $('.summary_profit').show();
+        } else {
+            $('.summary_profit').hide();
+        }
     }
 
     calculate_cost(<%= electricity_preset %>, <%= gas_preset %>);
