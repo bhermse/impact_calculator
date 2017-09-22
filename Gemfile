@@ -21,6 +21,8 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
