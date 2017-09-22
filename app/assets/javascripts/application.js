@@ -15,4 +15,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require numeral.min
 //= require_tree .

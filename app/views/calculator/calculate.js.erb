@@ -2,4 +2,15 @@ $('.calculating').fadeOut('slow', function () {
     $('div.spending.explanation').html('<%= j spending_explanation(electricity_preset, gas_preset) %>').fadeIn('slow');
     $('#electricitySlider').slider('setValue', <%= electricity_preset %>, true, true);
     $('#gasolineSlider').slider('setValue', <%= gas_preset %>, true, true);
+    $('.dividend').html('<%= number_to_currency(pre_tax) %>');
+
+    window.calculate_cost = function (elec, gas) {
+        var cost = <%= raw(cost_formula) %>;
+        $('.cost').html(numeral(cost).format('$0,0.00'));
+        var dividend = numeral($('.dividend').html()).value();
+        var impact = dividend - cost;
+        $('.net_impact').html(numeral(impact).format('$0,0.00'));
+    }
+
+    calculate_cost(<%= electricity_preset %>, <%= gas_preset %>);
 });
