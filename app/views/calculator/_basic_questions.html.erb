@@ -5,44 +5,61 @@
     <div class="explanation">
       This will help us figure out your dividend check and take some first guesses at your spending.
     </div>
-    <form>
+    <form id="basic_questions_form">
+      <div class="form-group row">
+        <label for="age" class="col-form-label col-4">Age</label>
+        <div class="col-3">
+          <input type="number" size="3" class="form-control" id="age" name="age">
+        </div>
+      </div>
       <div class="form-group row">
         <label for="adults" class="col-form-label col-4">ADULTS</label>
         <div class="col-8">
-          <select class="form-control number_select" id="adults">
+          <select class="form-control number_select" id="adults" name="adults">
             <option>1</option>
             <option>2</option>
+            <option>3</option>
+            <option>4</option>
           </select>
         </div>
       </div>
       <div class="form-group row">
         <label for="adults" class="col-form-label col-4">CHILDREN</label>
         <div class="col-8">
-          <select class="form-control number_select" id="children">
+          <select class="form-control number_select" id="children" name="children">
             <option>1</option>
             <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
           </select>
         </div>
       </div>
       <div class="form-group row">
         <label for="zip" class="col-form-label col-4">Zip Code</label>
         <div class="col-4">
-          <input type="zip" size="8" class="form-control" id="zip" placeholder="Zip Code">
+          <input type="zip" size="8" class="form-control" id="zip" name="zip" placeholder="Zip Code">
         </div>
       </div>
       <div class="form-group row">
         <label for="income" class="col-form-label col-4">Household Income</label>
         <div class="col-8">
-          <select class="form-control" id="income">
-            <option>$20,000 - $40,000</option>
-            <option>$40,000 - $60,000</option>
+          <select class="form-control" id="income" name="income">
+            <option value="15000">$10,000 - $20,000</option>
+            <option value="30000">$20,000 - $40,000</option>
+            <option value="50000">$40,000 - $60,000</option>
+            <option value="60000">$50,000 - $70,000</option>
+            <option value="80000">$70,000 - $90,000</option>
+            <option value="100000">$90,000 - $110,000</option>
+            <option value="150000">$110,000 - $200,000</option>
           </select>
         </div>
       </div>
     </form>
   </div>
   <div class="footer">
-    <a href="#spending" class="scroll-down">
+    <a href="#spending" id="calculate_button" class="scroll-down">
       <i class="fa fa-chevron-down"></i>
     </a>
   </div>
